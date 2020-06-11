@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/media/Formula-1-Logo-PNG-File.png">
     <title>F1 Standings</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
 
     <div class="header" id="header"></div>
     
     <form action="" name="getStandingsForm" id="getStandingsForm">
-        <!-- This should be a query -->
-        <input type="text" name="season" id="season" placeholder="2019">
-        <!-- This should be a query -->
-        <input type="text" name="lap" id="lap" placeholder="3">
-        <!-- This should the button that activates the query -->
-        <button id="buildTable" onclick="buildTable('#table')">Get Standings</button>
+        
+        <input type="text" name="season" id="season" placeholder="Season">
+        
+        <input type="text" name="round" id="round" placeholder="Race">
+        
+        <button id="buildTable" onClick="event.preventDefault(); getJSON();">Get Standings</button>
     </form>
 
     <table class="table" id="table">
@@ -31,9 +32,10 @@
             <th>Points</th>
         </tr>
 
-        <tbody id="tableBody">
+        <tbody id="tbody">
 
         </tbody>
+        
     </table>
 
 </body>

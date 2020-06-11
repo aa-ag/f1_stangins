@@ -17,10 +17,10 @@ html {
     border-bottom: solid 4px white;
 }
 #season {
-    margin-left: 27vw;
+    margin-left: 30vw;
 }
 
-#season, #lap, #buildTable {
+#season, #round, #buildTable {
     display: inline-block;
     margin-top: 8vh;
     border-radius: 4px;
@@ -32,14 +32,14 @@ html {
     background-color: rgb(239, 88, 88);
     color: white;
     width: 20vw;
-    height: 5vh;
+    height: 4.5vh;
     border: 0.5px solid rgba(4, 45, 106, 0.3);
 }
 
 .table {
     margin-top: 2.5vh;
-    margin-left: 27vw;
-    width: 47%;
+    margin-left: 30vw;
+    width: 37.3%;
     text-align: justify;
     background-color: rgba(4, 45, 106, 0.6);
     color: white;
