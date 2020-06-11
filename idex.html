@@ -13,9 +13,12 @@
     <div class="header" id="header"></div>
     
     <form action="" name="getStandingsForm" id="getStandingsForm">
+        <!-- This should be a query -->
         <input type="text" name="season" id="season" placeholder="2019">
+        <!-- This should be a query -->
         <input type="text" name="lap" id="lap" placeholder="3">
-        <button id="submitButton" onClick="event.preventDefault(); getJSON()">Get Standings</button>
+        <!-- This should the button that activates the query -->
+        <button id="submitButton" onClick="event.tableFromJson()">Get Standings</button>
     </form>
 
 </body>
