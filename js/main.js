@@ -2,6 +2,8 @@
 //     .then(response => response.json())
 //     .then(data => console.log(data));
 
+// http://ergast.com/api/f1/${year}/${round}/driverstandings.json
+
 var exampleArray = [
     {'position':'1', 'name':'Hamilton', 'nationality':'British', 'sponsor':'Mercedes', 'points':'50'},
     {'position':'2', 'name':'Bottas', 'nationality':'Finnish', 'sponsor':'Mercedes', 'points':'45'},
