@@ -7,6 +7,7 @@
     <title>F1 Standings</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/js/main.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -18,8 +19,22 @@
         <!-- This should be a query -->
         <input type="text" name="lap" id="lap" placeholder="3">
         <!-- This should the button that activates the query -->
-        <button id="submitButton" onClick="event.tableFromJson()">Get Standings</button>
+        <button id="buildTable" onclick="buildTable('#table')">Get Standings</button>
     </form>
+
+    <table class="table" id="table">
+        <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Nationality</th>
+            <th>Sponsor</th>
+            <th>Points</th>
+        </tr>
+
+        <tbody id="tableBody">
+
+        </tbody>
+    </table>
 
 </body>
 </html>
