@@ -36,6 +36,12 @@ async function getJSON(){
                 document.getElementById(`pts${i.toString()}`).innerHTML = pts;
             }
         })
+        .catch(error => {
+            if (error) {
+                let error = ' Something went wrong. Please check your input. '
+                document.body.append(error);
+            }
+        })
 };
 
 /* First approach: show that there's connection with the API
