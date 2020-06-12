@@ -44,6 +44,25 @@ async function getJSON(){
         })
 };
 
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
 /* First approach: show that there's connection with the API
 fetch('http://ergast.com/api/f1/2019/1/driverstandings.json')
     .then(response => response.json())
