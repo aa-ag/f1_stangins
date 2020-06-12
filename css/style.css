@@ -20,7 +20,7 @@ html {
     margin-left: 27vw;
 }
 
-#season, #lap, #submitButton {
+#season, #round, #buildTable {
     display: inline-block;
     margin-top: 8vh;
     border-radius: 4px;
@@ -28,16 +28,35 @@ html {
     border: 0.5px;
 }
 
-#submitButton {
+#buildTable {
     background-color: rgb(239, 88, 88);
     color: white;
     width: 20vw;
-    height: 5vh;
-    border: 0.5px solid silver;
+    height: 4.5vh;
+    border: 0.5px solid rgba(4, 45, 106, 0.3);
 }
 
 .table {
-    text-align: center;
-    background-color: black;
+    margin-top: 2.5vh;
+    margin-left: 27vw;
+    width: 47%;
+    text-align: justify;
+    background-color: rgba(26, 42, 66, 0.6);
     color: white;
+    border-radius: 4px;
+}
+
+table, th {
+    border-bottom: solid 0.5px rgba(173, 198, 235, 0.459);
+    border-collapse: collapse;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+th {
+    background-color: rgba(17, 60, 124, 0.459);
+}
+
+tr:hover {
+    background-color: rgba(17, 60, 124, 0.459);
 }
