@@ -1,4 +1,4 @@
-/* Third & final approach: JS only, using API */
+/* Third and final approach (from class): JS only, using API */
 
 async function getJSON(){
 
@@ -9,41 +9,31 @@ async function getJSON(){
 
     await fetch(`http://ergast.com/api/f1/${season}/${round}/driverstandings.json`)
         .then(data => data.json())
-        .then(rawData => {console.log(rawData.MRData.total)
+        .then(rawData => {
 
             for(let i = 0; i < 7; i++){
-                let position = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].position;
-                display_position = document.createElement('tr');
-                display_position.innerHTML = position;
-                document.body.append(display_position)
+                let pos = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].position;
+                document.getElementById(`pos${i.toString()}`).innerHTML = pos;
             }
 
             for(let i = 0; i < 7; i++){
-                let name = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.familyName;
-                display_name = document.createElement('tr');
-                display_name.innerHTML = name;
-                document.body.append(display_name)
+                let driver = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.familyName;
+                document.getElementById(`driver${i.toString()}`).innerHTML = driver;
             }
 
             for(let i = 0; i < 7; i++){
                 let country = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Driver.nationality;
-                display_country = document.createElement('tr');
-                display_country.innerHTML = country;
-                document.body.append(display_country)
+                document.getElementById(`nationality${i.toString()}`).innerHTML = country;
             }
 
             for(let i = 0; i < 7; i++){
                 let team = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].Constructors[0].name;
-                display_team = document.createElement('tr');
-                display_team.innerHTML = team;
-                document.body.append(display_team)
+                document.getElementById(`team${i.toString()}`).innerHTML = team;
             }
 
             for(let i = 0; i < 7; i++){
-                let accumulated_points = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].points;
-                display_accumulated_points = document.createElement('tr');
-                display_accumulated_points.innerHTML = accumulated_points;
-                document.body.append(display_accumulated_points)
+                let pts = rawData.MRData.StandingsTable.StandingsLists[0].DriverStandings[i].points;
+                document.getElementById(`pts${i.toString()}`).innerHTML = pts;
             }
         })
 };

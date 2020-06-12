@@ -17,7 +17,7 @@ html {
     border-bottom: solid 4px white;
 }
 #season {
-    margin-left: 30vw;
+    margin-left: 27vw;
 }
 
 #season, #round, #buildTable {
@@ -38,10 +38,25 @@ html {
 
 .table {
     margin-top: 2.5vh;
-    margin-left: 30vw;
-    width: 37.3%;
+    margin-left: 27vw;
+    width: 47%;
     text-align: justify;
-    background-color: rgba(4, 45, 106, 0.6);
+    background-color: rgba(26, 42, 66, 0.6);
     color: white;
     border-radius: 4px;
+}
+
+table, th {
+    border-bottom: solid 0.5px rgba(173, 198, 235, 0.459);
+    border-collapse: collapse;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+th {
+    background-color: rgba(17, 60, 124, 0.459);
+}
+
+tr:hover {
+    background-color: rgba(17, 60, 124, 0.459);
 }
